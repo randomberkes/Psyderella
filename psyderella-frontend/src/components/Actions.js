@@ -4,11 +4,14 @@ import Dislike from './actions/Dislike';
 import Like from './actions/Like';
 import Superlike from './actions/Superlike';
 
-const Actions = () => {
+const Actions = ({person, modifyChoices}) => {
     return <div id="actions">
         <Rewind/>
         <Dislike/>
-        <Like/>
+        <Like
+            userId={person.id}
+            modifyChoices={modifyChoices}
+        />
         <Superlike/>
     </div>
 }
