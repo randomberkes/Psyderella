@@ -2,6 +2,7 @@ import React from "react"
 import Header from "./components/Header"
 import Dislike from "./components/actions/Dislike"
 import Like from "./components/actions/Like"
+import Rewind from "./components/actions/Rewind"
 import './App.css';
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
             <Header/>
             <Dislike/>
             <Like/>
+            <Rewind/>
         </div>
     )
 }
