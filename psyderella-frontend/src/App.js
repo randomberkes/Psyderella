@@ -3,6 +3,7 @@ import Header from "./components/Header"
 import Dislike from "./components/actions/Dislike"
 import Like from "./components/actions/Like"
 import Rewind from "./components/actions/Rewind"
+import Superlike from "./components/actions/Superlike"
 import './App.css';
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
             <Dislike/>
             <Like/>
             <Rewind/>
+            <Superlike/>
         </div>
     )
 }
