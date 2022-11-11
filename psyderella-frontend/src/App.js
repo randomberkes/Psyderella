@@ -59,6 +59,7 @@ const App = () => {
     
     return (
         <div className="app">
+            <div>Learn React</div>
             <Header/>
             {people[1] ? (
                 <Person
