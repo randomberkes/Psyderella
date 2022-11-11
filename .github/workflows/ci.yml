@@ -32,6 +32,6 @@ jobs:
         cd psyderella-frontend
         npm run build
     - name: Run component tests
-    - run: |
+      run: |
         cd psyderella-frontend
         npm test
