@@ -39,7 +39,7 @@ jobs:
         npm test
         
     - name: Build and Push Docker Image
-      uses: docker/build-push-action@v3.2.0
+      uses: mr-smithers-excellent/docker-build-push@v4
       with:
         image: randomberkes/psyderella
         registry: docker.io
