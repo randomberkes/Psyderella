@@ -1,7 +1,8 @@
-const Navbar = ({ minimal, authToken, setShowModal, showModal }) => {
+const Navbar = ({ minimal, authToken, setShowModal, showModal, setIsSignUp }) => {
 
     const handleClick = () => {
         setShowModal(true)
+        setIsSignUp(false)
     }
 
     return (
