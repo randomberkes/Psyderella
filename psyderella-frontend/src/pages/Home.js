@@ -11,13 +11,16 @@ const Home = () => {
 
     return (
         <>
-            <div className="overlay"></div>
-            <Navbar minimal={false} authToken={true}/>
-            <div className="Home">
-                <h1>Swipe Right</h1>
-                <button className="primary-button" onClick={handleClick}>
-                    {authToken ? 'Signout' : 'Create Account'}
-                </button>
+            
+           
+            <div className="overlay">
+                <Navbar minimal={false} authToken={false}/>
+                <div className="Home">
+                    <h1>Swipe Right</h1>
+                    <button className="primary-button" onClick={handleClick}>
+                        {authToken ? 'Signout' : 'Create Account'}
+                    </button>
+                </div>
             </div>
         </>
     )
