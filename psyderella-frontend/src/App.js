@@ -4,6 +4,9 @@ import Person from "./components/Person"
 import Result from "./components/Result"
 import data from "./data.json"
 import './App.css';
+import Home from "./pages/Home";
+import OnBoarding from "./pages/OnBoarding";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
     const [people, setPeople] = useState(data);
@@ -58,25 +61,32 @@ const App = () => {
 
     
     return (
-        <div className="app">
-            <div>Learn React</div>
-            <Header/>
-            {people[1] ? (
-                <Person
-                key={people[1].id}
-                person={people[1]}
-                modifyChoices={modifyChoices}
-                likedUsers={likedUsers}
-            />
-            ) : (
-                <Result
-                activeUserImage={people[activeUser].image}
-                likedUsers={likedUsers}
-                superLikedUsers={superLikedUsers}
-                />
-            )}
+        // <div className="app">
+        //     <div>Learn React</div>
+        //     <Header/>
+        //     {people[1] ? (
+        //         <Person
+        //         key={people[1].id}
+        //         person={people[1]}
+        //         modifyChoices={modifyChoices}
+        //         likedUsers={likedUsers}
+        //     />
+        //     ) : (
+        //         <Result
+        //         activeUserImage={people[activeUser].image}
+        //         likedUsers={likedUsers}
+        //         superLikedUsers={superLikedUsers}
+        //         />
+        //     )}
             
-        </div>
+        // </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path={"/"} element={<Home/>}/>
+                <Route path={"/dashboard"} element={<Dashboard/>}/>
+                <Route path={"/onBoarding"} element={<OnBoarding/>}/>
+            </Routes>
+        </BrowserRouter>
     )
 }
 
